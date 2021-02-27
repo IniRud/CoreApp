@@ -1,0 +1,39 @@
+﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model CoreApp.Pages.CreateModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <title>Create</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+</head>
+<body>
+    <h3>Create Students</h3>
+    <form method="post">
+        <table class="table col-4">
+            <tr>
+                <td style="width: 15px">First Name:</td>
+                <td><input type="text" width="250" name="FirstName"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" width="250" name="LastName"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" width="250" name="Phone"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Save" class="btn btn-primary" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

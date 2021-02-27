@@ -1,0 +1,38 @@
+﻿@page
+@model CoreApp.Pages.StudentsModel
+@{
+    Layout = null;
+    var today = DateTime.Now.ToShortDateString();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width-devide-width" />
+    <title>Students</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/site.css"/>
+</head>
+<body>
+    <table class="table col-6">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Students[0].FirstName)</th>
+            <th>@Html.DisplayNameFor(m => m.Students[0].LastName)</th>
+            <th>@Html.DisplayNameFor(m => m.Students[0].Phone)</th>
+        </tr>
+        @foreach(var student in Model.Students)
+        {
+    <tr>
+        <td>@Html.DisplayFor(item => student.FirstName)</td>
+        <td>@Html.DisplayFor(item => student.LastName)</td>
+        <td>@Html.DisplayFor(item => student.Phone)</td>
+    </tr>
+        }
+    </table>
+    <p>
+        <a href="Create">Create new Student</a>
+    </p>
+
+</body>
+</html>
